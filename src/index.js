@@ -25,6 +25,14 @@ const globalStyles = css`
   .root {
     min-height: 100vh;
   }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `
 
 ReactDOM.render(

@@ -57,6 +57,10 @@ const sessionSlice = createSlice({
     [fetchLogout.pending]: (state) => {
       state.status = 'pending';
     },
+    [fetchLogout.fulfilled]: (state) => {
+      state.status = 'succeeded';
+      state.token = sessionStorage.getItem('token');
+    },
     [fetchLogout.rejected]: (state, action) => {
       state.status = 'rejected';
       state.error = action.error.message;

@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import { Global, css } from '@emotion/react';
+import colors from './components/UI/colors';
 
 const globalStyles = css`
   @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
@@ -13,6 +14,7 @@ const globalStyles = css`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: ${colors.gray2};
   }
 
   body {

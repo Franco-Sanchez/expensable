@@ -25,6 +25,7 @@ export const ButtonBorder = styled(ButtonFill)`
   border: 1px solid ${colors.blue1};
 
   &:hover {
+    border: 1px solid ${colors.blue2};
     background-color: rgba(47, 128, 237, 0.1);
   }
 `

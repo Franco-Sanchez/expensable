@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/container/NavBar";
 import { Heading2 } from '../components/UI/texts/Headings';
 import { ButtonBorder } from '../components/UI/Buttons';
 import { useDispatch, useSelector } from "react-redux";

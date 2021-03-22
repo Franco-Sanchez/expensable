@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect, useHistory } from "react-router";
+import { Redirect } from "react-router";
 import FormField from "../../components/form/FormField";
 import { ButtonFill } from "../../components/UI/Buttons";
 import { fetchLogin } from "./sessionSlice";
@@ -10,7 +10,6 @@ function LoginForm() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const token = useSelector((state) => state.session.token);
   const dispatch = useDispatch();
-  const history = useHistory();
 
   const { email, password } = formData;
 

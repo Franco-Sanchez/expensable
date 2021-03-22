@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { BsFillTrashFill } from 'react-icons/bs';
 import colors from './colors';
 
-function TrashButton() {
+function TrashButton({ onClick }) {
   return (
-    <StyledButton>
+    <StyledButton onClick={onClick}>
       <BsFillTrashFill />
     </StyledButton>
   )

@@ -30,20 +30,18 @@ export const fetchDeleteCategory = createAsyncThunk(
     })
 
     const data = await response.json()
-    if(response.status === 204) {
-      return true;
-    } else {
-      throw new Error(JSON.stringify(data.errors)) // debería retornar un array
-    }
+    if(!response.status === 204) {
+      throw new Error(JSON.stringify(data.errors))
+    } 
+
+    return true;
   }
 )
 
 export const categoriesSlice = createSlice({
   name: "categories",
   initialState: {
-    expenses: [],
-    income: [],
-    // items: [],
+    items: [],
     status: "idle",
     errors: null,
   },
@@ -58,15 +56,7 @@ export const categoriesSlice = createSlice({
     },
     [fetchCategories.fulfilled]: (state, action) => {
       state.status = "succeeded";
-      // state.items = action.payload.categories;
-      state.expenses = action.payload.categories.filter(
-        (category) => category.transaction_type === "expenses"
-      );
-      // save expenses in sessionStorage or localStorage
-      state.income = action.payload.categories.filter(
-        (category) => category.transaction_type === 'income'
-      );
-      // save income in sessionStorage or localStorage
+      state.items = action.payload.categories;
       state.errors = null;
     },
     [fetchCategories.rejected]: (state, action) => {

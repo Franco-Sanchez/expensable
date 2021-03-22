@@ -17,7 +17,7 @@ function Category({ category }) {
     <article>
       <ContentL>{category.name}</ContentL>
       <ContentS>{category.transactions.length} transactions</ContentS>
-      <ContentXL>{totalPrice}</ContentXL>
+      <ContentXL>${totalPrice.toFixed(2)}</ContentXL>
       <TrashButton onClick={handleDeleteCategory} />
     </article>
   )

@@ -6,6 +6,7 @@ import { fetchLogout } from "../features/session/sessionSlice";
 import { Redirect } from "react-router";
 import Category from "../components/categories/Category";
 import { fetchCategories } from '../features/categories/categoriesSlice';
+import { StyledContainer, StyledCategory } from '../components/categories/boxes';
 
 function Income() {
   const token = useSelector(state => state.session.token);
@@ -29,14 +30,14 @@ function Income() {
   }
 
   return (
-    <section>
+    <StyledCategory>
       <Heading2>Expensable</Heading2>
       <NavBar />
-      <div>
+      <StyledContainer>
         {income.map(income => <Category key={income.id} category={income}/> ) }
-      </div>
+      </StyledContainer>
       <ButtonBorder onClick={handleLogout}>Log out</ButtonBorder>
-    </section>
+    </StyledCategory>
   )
 }
 

@@ -23,6 +23,8 @@ export const ButtonBorder = styled(ButtonFill)`
   background-color: transparent;
   color: ${colors.blue1};
   border: 1px solid ${colors.blue1};
+  position: fixed;
+  bottom: 40px;
 
   &:hover {
     border: 1px solid ${colors.blue2};

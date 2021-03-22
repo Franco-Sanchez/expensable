@@ -41,7 +41,7 @@ const StyledList = styled.ul`
     font-family: "Inter";
     text-transform: capitalize;
     color: ${colors.gray4};
-    padding: 0 4px 8px 4px;
+    padding-bottom: 8px;
     border-bottom: 2px solid ${colors.gray4};
   }
 
